@@ -1,3 +1,7 @@
 name = "Harry"
 
-print(name[0])
+print(name[1])
+
+names = ["Harry", "Ron", "Hermione"]
+
+print(names[0])
