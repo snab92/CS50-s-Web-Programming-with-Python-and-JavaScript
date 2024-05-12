@@ -2,11 +2,27 @@
 <html lang="en">
     <head>
         <title>Search</title>
+        <script src="https://kit.fontawesome.com/546e025042.js" crossorigin="anonymous"></script>
     </head>
     <body>
-        <form action="https://www.google.com/search">
-            <input type="text" name="q">
-            <input type="submit" value="Google Search">
-        </form>
+        <header>
+            <nav>
+                <a href="https://www.google.com/"><i class="fa-brands fa-google"></i></a>
+                <a href="imgsrch.html"><i class="fa-solid fa-image"></i></a> 
+                <a href="imgsrch.html"><i class="fa-solid fa-filter"></i></a> 
+            </nav>
+        </header>
+
+        <main>
+            <h1>Google</h1>
+            <div>
+                <form action="https://www.google.com/search">
+                    <i class="fa-solid fa-magnifying-glass"><input type="text" name="q"></i>
+                    <br>
+                    <input type="submit" value="Google Search">
+                    <input type="submit" value="I'm feeling lucky">
+                </form>
+            </div>
+        </main>
     </body>
 </html>
