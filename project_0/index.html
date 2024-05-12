@@ -3,25 +3,33 @@
     <head>
         <title>Search</title>
         <script src="https://kit.fontawesome.com/546e025042.js" crossorigin="anonymous"></script>
+
+        <link rel="stylesheet" type="text/css" href="styles.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Reddit+Sans:ital,wght@0,200..900;1,200..900&display=swap" rel="stylesheet">
     </head>
     <body>
         <header>
             <nav>
                 <a href="https://www.google.com/"><i class="fa-brands fa-google"></i></a>
                 <a href="imgsrch.html"><i class="fa-solid fa-image"></i></a> 
-                <a href="imgsrch.html"><i class="fa-solid fa-filter"></i></a> 
+                <a href="advsrch.html"><i class="fa-solid fa-filter"></i></a> 
             </nav>
         </header>
 
         <main>
-            <h1>Google</h1>
-            <div>
-                <form action="https://www.google.com/search">
-                    <i class="fa-solid fa-magnifying-glass"><input type="text" name="q"></i>
-                    <br>
-                    <input type="submit" value="Google Search">
-                    <input type="submit" value="I'm feeling lucky">
-                </form>
+            <div class="container">
+                <div>
+                    <img style="margin-bottom: 14px;"  src="images/google.png" alt="google" height="200px" width="200px">
+                    <form action="https://www.google.com/search">
+                        <i class="fa-solid fa-magnifying-glass"><input type="text" name="q" class="input_text"></i>
+                        <div>
+                            <input class="buttons" type="submit" value="Google Search" >
+                            <input class="buttons" type="submit" value="I'm feeling lucky">
+                        </div>
+                    </form>
+                </div>
             </div>
         </main>
     </body>
