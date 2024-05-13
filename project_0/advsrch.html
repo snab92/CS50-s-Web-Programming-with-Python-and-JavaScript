@@ -3,20 +3,41 @@
     <head>
         <title>Search</title>
         <script src="https://kit.fontawesome.com/546e025042.js" crossorigin="anonymous"></script>
+
+        <link rel="stylesheet" type="text/css" href="styles.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Reddit+Sans:ital,wght@0,200..900;1,200..900&display=swap" rel="stylesheet">
     </head>
     <body>
         <header>
             <nav>
                 <a href="index.html"><i class="fa-brands fa-google"></i></a>
+                <a href="imgsrch.html"><i class="fa-solid fa-image"></i></a>  
             </nav>
         </header>
 
+        <main>
+            <div>
+                <div class="headadv"><h2 class="container_advanced">Advanced Search</h2></div>
+                <div class="container_advanced">
+                    <h3><strong>Find pages with...</strong></h3>
+                    <form action="http://www.google.com/search">
+                        <label>All these words:</label> 
+                        <input class="advanced_input" type="text" name="as_q" style="margin-left: 66px;"> <br>
+                        <label>This exact word or phrase:</label>
+                        <input class="advanced_input" type="text" name="as_epq"> <br>
+                        <label>Any of these words:</label>
+                        <input class="advanced_input" type="text" name="as_oq" style="margin-left: 42px;"> <br>
+                        <label>None of these words:</label>
+                        <input class="advanced_input" type="text" name="as_eq" style="margin-left: 35px;">
 
-        <div>
-            <form action="https://www.google.com/search">
-                <input type="text" name="q">
-                <input type="submit" value="Google Search">
-            </form>
-        </div>
+                        <div>
+                            <input class="advanced_button" type="submit" value="Advanced Search">
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </main>
     </body>
 </html>

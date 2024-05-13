@@ -3,6 +3,11 @@
     text-align: center;
     margin-top: 130px;
 }
+.container_advanced{
+    text-align: start;
+    margin-left: 30px;
+    margin-top: 40px;
+}
 nav{
     text-align: end;
     font-size: 1.5rem;
@@ -17,9 +22,32 @@ div{
     border-radius: 18px;
 }
 
+.advanced_input{
+    width: 572px; height: 25px;
+    margin-bottom: 13px;
+}
+
 .buttons{
     width: 150px; height: 36px;
     margin-right: 14px;
     border-radius: 4px;
     text-align: center;
+}
+
+.advanced_button{
+    width: 150px; height: 36px;
+    background-color: blue;
+    color: white;
+    border-radius: 4px;
+    text-align: center;
+    margin-left: 605px;
+}
+
+h2{
+    padding-bottom: 15px;
+    color: red;
+}
+
+.headadv{
+    border-bottom: 1px solid grey;
 }
