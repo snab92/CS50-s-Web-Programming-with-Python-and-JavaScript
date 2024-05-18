@@ -1,9 +1,9 @@
 {% extends "encyclopedia/layout.html" %}
 
 {% block title %}
-    CSS
+    {{ title }}
 {% endblock %}
 
 {% block body %}
-    
+    <div><p>{{ content|safe }}</p></div> <!-- the safe is so django can render safely the html otherwise is would escape it for security reasons -->
 {% endblock %}

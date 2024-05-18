@@ -9,7 +9,7 @@
 
     <ul>
         {% for entry in entries %}
-            <a href="{% url 'entry' %}"><li>{{ entry }}</li></a>
+            <li> <a href="{% url 'entry'  title=entry %}"> {{ entry }} </a></li> <!-- title = entry tells urls.py that the <str:title> value is going to be the entry from this line -->
         {% endfor %}
     </ul>
 
