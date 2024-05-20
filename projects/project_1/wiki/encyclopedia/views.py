@@ -74,7 +74,7 @@ def new_page(request):
             if util.get_entry(title):
                 return render(request, "encyclopedia/new_page.html", {
                     "form": form,
-                    "error_message": "An entry with this titel already exists."
+                    "error_message": "An entry with this title already exists."
                 })
             util.save_entry(title, content)
             return HttpResponseRedirect(f"/wiki/{title}")
