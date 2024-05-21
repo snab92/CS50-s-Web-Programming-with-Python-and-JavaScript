@@ -5,14 +5,16 @@
 {% endblock %}
 
 {% block body %}
-    <h1>New Page</h1>
+        <div class="container-fluid text-center">
+            <h1>New Page</h1>
     {% if error_message %}
-        <p> {{ error_message }}</p>
+            <p class="alert alert-danger"> {{ error_message }}</p>
+    {% else %}
+            <form action="{% url 'newpage' %}" method="POST">
+                {% csrf_token %}
+                {{ form }}
+                <input type="submit" value="Save" name="save">
+            </form>
+        </div>
     {% endif %}
-
-    <form action="{% url 'newpage' %}" method="post">
-        {% csrf_token %}
-        {{ form.as_p }}
-        <input type="submit" value="Save" name="save">
-    </form>
 {% endblock %}

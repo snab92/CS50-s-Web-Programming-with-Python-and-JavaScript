@@ -5,12 +5,14 @@
 {% endblock %}
 
 {% block body %}
+    {% if error_message %}
+        <p class="alert alert-danger"> {{ error_message }} </p>
+    {% else %}
     <h1>All Pages</h1>
-
     <ul>
         {% for entry in entries %}
             <li> <a href="{% url 'entry'  title=entry %}"> {{ entry }} </a></li> <!-- title = entry tells urls.py that the <str:title> value is going to be the entry from this line -->
         {% endfor %}
     </ul>
-
+    {% endif %}
 {% endblock %}
