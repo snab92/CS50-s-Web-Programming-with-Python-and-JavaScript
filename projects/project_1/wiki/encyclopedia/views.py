@@ -42,7 +42,7 @@ def entry(request, title):
         })
     else:
         return render(request, "encyclopedia/entries.html",{
-            "titel": title,
+            "title": title,
             "content": html_content,
         })
 
@@ -79,7 +79,7 @@ def new_page(request):
             if any(title.lower() == entry.lower() for entry in existing_entries):
                 return render(request, "encyclopedia/new_page.html", {
                     "form": form,
-                    "error_message": "An entry with this title already exists.",
+                    "error_message": "An entry with this title already exists."
                 })
             else:
                 util.save_entry(title, content)
@@ -88,3 +88,24 @@ def new_page(request):
         return render(request, "encyclopedia/new_page.html",{
             "form": NewPage()
         })
+
+
+def edit(request):
+    if request.method == "POST":  
+        print(request.POST)  
+        title = request.POST['entry_title']      
+        content = util.get_entry(title)
+        return render(request, "encyclopedia/edit.html",{
+            "title": title,
+            "content": content
+        })
+    
+
+def save_edit(request):
+    if request.method == "POST":
+        title = request.POST["title"]      
+        content = request.POST["content"]  
+        util.save_entry(title, content)     
+        return HttpResponseRedirect(f"/wiki/{title}")
+       
+    return

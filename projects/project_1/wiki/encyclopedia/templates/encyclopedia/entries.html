@@ -6,4 +6,11 @@
 
 {% block body %}
     <div><p>{{ content|safe }}</p></div> <!-- the safe is so django can render safely the html otherwise is would escape it for security reasons -->
+
+    <form action="{% url 'edit' %}" method="POST">
+        {% csrf_token %}
+        <input type="hidden" name="entry_title" value="{{title}}">
+        <input type="submit" value="Edit"  class="btn btn-primary">
+    </form>
+
 {% endblock %}
